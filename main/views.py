@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
 
-class HomeView(LoginRequiredMixin, TemplateView):
+class HomeView(TemplateView):
     template_name = 'home.html'
     def get(self, request):
-        return render(request, 'main/index.html')
+        from .models import Countries
+        countries = Countries.objects.all()
+        return render(request, 'main/index.html', {'countries': countries})
     
 class AboutView(TemplateView):
     template_name = 'about.html'
