@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  {% load static %}
   <head>
 
     <meta charset="utf-8">
@@ -56,8 +56,8 @@ https://templatemo.com/tm-580-woox-travel
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="{% url 'home' %}" class="active">Home</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}" class="active">About</a></li>
                         <li><a href="{% url 'deals' %}">Deals</a></li>
                         <li><a href="{% url 'reservation' %}">Reservation</a></li>
                         <li><a href="{% url 'reservation' %}">Book Yours</a></li>

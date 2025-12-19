@@ -1,4 +1,7 @@
 from pathlib import Path
+from django.contrib.messages import constants as messages
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -99,6 +102,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+LOGIN_URL = 'login'
+
+LOGIN_REDIRECT_URL = ''
+
+LOGOUT_REDIRECT_URL = 'login'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
